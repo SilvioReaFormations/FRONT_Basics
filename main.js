@@ -1,4 +1,6 @@
-const myElement = window.document.getElementById('monElement');
-myElement.style.backgroundColor = 'lightblue';
-myElement.querySelector('h1').textContent = 'Élément sélectionné avec getElementById';
-myElement.querySelector('p').textContent = 'Vous pouvez manipuler cet élément avec JavaScript.';
+
+// Selection du 1er élément qui porte le nom de classe "titre"
+let e = document.querySelector('.titre');
+
+// Accéder au contenu texte de ma selection
+e.textContent = 3;  
