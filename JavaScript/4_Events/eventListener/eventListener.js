@@ -16,3 +16,10 @@ img.addEventListener('click', clic, false);
 setTimeout(() => {
     img.removeEventListener('click', clic, false);
 }, 5000);
+
+
+// On peut aussi intégrer la fonction lambda directement en paramètre : 
+img.addEventListener('click', evt => {
+    logo = logo == 'js' ? 'vscode' : 'js';
+    evt.target.src = `logo_${logo}.png`;
+}, false);

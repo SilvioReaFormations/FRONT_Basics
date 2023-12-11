@@ -25,5 +25,11 @@ for (element of tab) {
 // JS crée automatiquement une variable pour tous les éléments HTML de type "id"
 console.log(out);
 
-// Selection d'une élement dans le contexte d'un autre élément (et pas dans tous le document)
+// Selection d'un élement dans le contexte d'un autre élément (et pas dans tous le document)
 out.querySelector('div');
+
+//////////
+
+
+
+
