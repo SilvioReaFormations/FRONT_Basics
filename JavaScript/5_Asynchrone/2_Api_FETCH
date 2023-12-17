@@ -1,0 +1,81 @@
+/* L'API FETCH (rapporte) permet de récupérer des ressources à partir d'une URL
+Elle permets de traiter les principales requetes GET, POST, PUT, DELETE
+Elle retourne systematiquement une PROMESSE
+*/
+
+let url = 'URL que je souhaite explorer'
+
+fetch(url)
+    .then(reponse => console.log(reponse))
+    .catch(erreur => console.log(erreur.message))
+
+
+// GET 
+fetch('https://jsonplaceholder.typicode.com/posts/1')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Erreur réseau');
+    }
+    return response.json();
+  })
+  .then(data => console.log(data))
+  .catch(error => console.error('Erreur :', error));
+
+
+
+// POST
+fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    title: 'Nouvel article',
+    body: 'Contenu de l\'article',
+    userId: 1,
+  }),
+})
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Erreur réseau');
+    }
+    return response.json();
+  })
+  .then(data => console.log(data))
+  .catch(error => console.error('Erreur :', error));
+
+
+// PUT
+fetch('https://jsonplaceholder.typicode.com/posts/1', {
+  method: 'PUT',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    id: 1,
+    title: 'Article mis à jour',
+    body: 'Contenu mis à jour',
+    userId: 1,
+  }),
+})
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Erreur réseau');
+    }
+    return response.json();
+  })
+  .then(data => console.log(data))
+  .catch(error => console.error('Erreur :', error));
+
+
+// DELETE
+fetch('https://jsonplaceholder.typicode.com/posts/1', {
+  method: 'DELETE',
+})
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Erreur réseau');
+    }
+    console.log('Suppression réussie');
+  })
+  .catch(error => console.error('Erreur :', error));

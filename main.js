@@ -1,18 +1,9 @@
-// fonction qui va changer le lien de l'image a chaque clic
-let logo = "js"
-let img = out.querySelector('img');
-
-function clic(event){
-    logo = logo == 'js' ? 'vscode' : 'js';
-    event.target.src = `logo_${logo}.png`;
-}
-
-
-// Ajouter, supprimer un eventListener
-// paramètres : type d'évenement, nom de la fonction, utilisation du mode capture
-img.addEventListener('click', clic, false);
-
-// Suppression du Listener après 5 sec
-setTimeout(() => {
-    img.removeEventListener('click', clic, false);
-}, 5000);
+fetch('https://jsonplaceholder.typicode.com/posts/1')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Erreur réseau');
+    }
+    return response.json();
+  })
+  .then(data => console.log(data))
+  .catch(error => console.error('Erreur :', error));
