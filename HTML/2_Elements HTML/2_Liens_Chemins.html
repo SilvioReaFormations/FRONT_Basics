@@ -1,0 +1,48 @@
+                <!-- LES LIENS -->
+
+<!-- Href est le du lien, et l'Ancre (Le texte entre les balises) 
+        sera le texte du lien sur lequel on clique -->
+
+<!-- Chemin du lien peut etre une URL -->
+<a href="https://google.fr"> Google </a>
+
+<!-- Il peut aussi être in ID (de la même page)-->
+<a href="#titre1"> Aller au premier titre </a>
+<a href="#titre2"> Aller au deuxième titre </a>
+
+<h1 id="titre1"> TITRE PRINCIPAL </h1>
+<h2 id="titre2"> Sous-Titre</h2>
+
+<!-- Il peut aussi etre le nom d'un fichier HTML -->
+<a href="nomDuFichier.html"> Lien vers une autre page du site</a>
+
+
+<!-- /////////////////////////////////////////////////// -->
+
+                <!-- LES CHEMINS -->
+
+<!-- Chemin absolue : spécifie l'emplacement d'une ressource depuis la racine du système de fichiers ou la racine du site web-->
+<a href="https://google.fr"> Google </a>
+
+<!-- Chemin relatif : spécifie l'emplacement par rapport à un point => Chemin RELATIF a un dossier par exemple-->
+<!-- J'avance dans les fichiers enfants -->
+<a href="nomDuFichier.html"> Lien vers une autre page du site</a>
+<a href="./nomDuFichier.html"> Lien vers une autre page du site</a>
+
+<!-- Je remonte dans les fichiers parents -->
+<a href="../nomDuFichier.html"> Lien vers une autre page du site</a>
+<a href="../../../nomDuFichier.html"> Lien vers une autre page du site</a>
+
+<!-- CHOSE IMPORTANTE SUR LES CHEMINS : ne pas confondre "./" et "/" -->
+
+<!-- "./" représente le répertoire courant.
+        "./monChemin" indique que le chemin à suivre commence à partir 
+        du répertoire actuel où se trouve le fichier HTML. C'est un chemin relatif-->
+<a href="./monChemin"> lien vers mon chemin </a>
+
+<!-- "/" représente la racine du site ou du serveur 
+        "./monChemin"  indique que le chemin à suivre commence à partir de la racine du site,
+         quel que soit l'endroit où se trouve le fichier HTML C'est un absolue raccourci-->
+<a href="/monChemin"> lien vers mon chemin </a>
+
+

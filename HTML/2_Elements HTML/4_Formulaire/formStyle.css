@@ -1,0 +1,36 @@
+input{
+    /* Tous les input du form en block */
+    display: block;
+}
+
+
+/* Validation */
+input:valid{
+    border: 2px solid green;
+}
+input:invalid{
+    border: 2px groove red;
+}
+
+
+
+form {
+    background-color: #cfcfcf;
+
+    /* Ajouter une ombre au form: x, y, flou, couleur */
+    box-shadow: 0px 3px 5px #888888;
+
+    /* Pour faire respirer le formulaire */
+    padding: 15 px;
+
+    /* Marge : 25 en haut, auto a G et D, et 0 en bas */
+    margin: 25px auto 0;
+
+    /* Largeur maximale */
+    max-width: 400px;
+
+    /* Arrondi les angles */
+    border-radius: 5px;
+
+    
+}

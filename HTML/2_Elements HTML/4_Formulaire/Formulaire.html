@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./formStyle.css">
+</head>
+<body>
+
+    
+    <form action="">    <!-- attribut Action attend un chemin vers lequel envoyer les données -->
+       
+
+                                        <!-- INPUT -->
+
+        <!-- INPUT : Zone de texte qui sert généralement a envoyer des données au serveur
+            LABEL est le texte qui apparaitra avant l'Input, il est associé à l'ID de l'input pour se lier à lui 
+        
+            Attributs :
+            name :          labeliser les données par le Serveur  
+            placeholder :   texte par default de l'input 
+            type :          text, email, password ...-->     
+        <label for="yourName"> Votre nom </label>
+        <input type="text" 
+        id="yourName" 
+        name="nom"
+        placeholder="texte par defaut"
+        >
+
+
+<p> <strong>TYPES D'INPUT</strong> </p>
+
+                                        <!-- LES TYPES D'INPUT -->    
+
+        <!-- TEXT :  champ de texte-->
+        <input type="text" name="nom" placeholder="Entrez votre nom">
+
+        <!-- PASSWORD : champ de texte où les caractères saisis sont masqués -->
+        <input type="password" name="motDePasse" placeholder="Entrez votre mot de passe">
+
+        <!-- NUMBER : saisie de nombre -->
+        <input type="number" name="quantite" min="1" max="100" value="1">
+
+        <!-- DATE !! au format de date AMERICAIN !!-->
+        <input type="date" name="dateNaissance">
+
+        <!-- EMAIL -->
+        <input type="email" name="email" placeholder="E-Mail">
+
+        <!-- URL -->
+        <input type="url" name="url" placeholder="Url">
+
+        <!-- TEL -->
+        <input type="tel" name="tel" placeholder="Phone Number">
+
+        <!-- CHECKBOX : Permet à l'utilisateur de sélectionner/désélectionner une option. -->
+        <input type="checkbox" name="accepter" id="accepter">
+        <label for="accepter">J'accepte les termes et conditions</label>
+
+        <!-- RADIO : Permet à l'utilisateur de choisir une option parmi plusieurs.
+        Name doit etre le même
+        Value doit etre differente -->
+        <input type="radio" name="genre" value="homme" id="homme">
+        <label for="homme">Homme</label>
+
+        <input type="radio" name="genre" value="femme" id="femme">
+        <label for="femme">Femme</label>
+
+        <!-- TEXTAREA : Zone de texte -->
+        <textarea name="commentaire" placeholder="Entrez votre commentaire"></textarea>
+
+        <!-- BUTTON : Bouton de SUBMIT qui valide le formulaire-->
+        <input type="button" value="Cliquez-moi">
+        <button type="submit"> Cliquer ICI pour valider </button>
+
+        <!-- SUBMIT: Soumettre le formulaire -->
+        <input type="submit" value="Envoyer">
+        
+        <!-- RESET : réinitialiser le formulaire -->
+        <input type="reset" value="Réinitialiser">
+
+        <!-- COLOR SELECTION -->
+        <input type="color">
+
+        <!-- RANGE -->
+        <input type="range">
+
+        <!-- FILE : Pour upload des fichiers -->
+        <input type="file">
+
+        
+<!-- //////////////////////////////////////////////////////////////////// -->
+<p> <strong>SELECT</strong> </p>
+
+                                <!--LE SELECT : choix dans une liste -->
+
+        <label for="mesFruits"> choisissez votre fruit</label>     
+        <select name="fruit" id="mesFruits">
+
+            <!-- valeur par defaut optionnel -->
+            <option value=""> Choissisez votre fruit préféré </option>
+
+            <!-- Valeurs à selectionner -->
+            <option value="pomme">pomme</option>
+            <option value="poire">poire</option>
+            <option value="fraise">fraise</option>
+        </select>   
+
+<p> <strong>DATALIST</strong> </p>
+
+                                <!-- LE DATALIST : choix dans une liste filtrable -->
+
+        <!-- Le LABEL est a lier à la LISTE
+            La LISTE est a lier à la DATALISTE-->
+        <label for="choix-langues"> choisissez une langue </label>
+        <input id="choix-langues" list="langue" name="langue"> 
+        
+        <datalist id="langue">
+            <option value="français">Apprendre le FRANCAIS</option>
+            <option value="italien">Apprendre l'ITALIEN</option>
+            <option value="allemand">Apprendre l'ALLEMAND</option>
+        </datalist>
+
+
+<!-- //////////////////////////////////////////////////////////////////// -->
+
+<p> <strong>VALIDATION</strong> </p>
+
+                            <!-- VALIDATION -->
+    
+    <!-- REQUIRED : Champ obligatoire -->
+    <label for="name"> votre nom</label>
+    <input type="text" id="name" required>
+
+    <!-- MIN/MAX LENGHT => text
+        MIN ET MAX => number -->
+    <label for="lastName"> votre prénom</label>
+    <input type="text" id="lasName" minlength="3" maxlength="10" required>
+    <label for="age"> votre age</label>
+    <input type="number" id="age" min="18" max="100" required>
+    
+    <!-- AUTOCOMPLETE : on ou of pour activer ou non les données en mémoire -->
+    <label for="email"> votre adresse</label>
+    <input type="email" id="email" autocomplete="of">
+
+
+    <!-- CHECKED : coche automatique-->
+    <input type="checkbox" checked>
+
+    <!-- DISABLED : desactiver un element -->
+    <input type="checkbox" disabled>
+
+
+
+    </form>
+
+
+
+    
+</body>
+</html>

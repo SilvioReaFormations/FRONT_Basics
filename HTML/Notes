@@ -1,3 +1,15 @@
 HTML : HyperText Markup Language
 
-Doctype = ! + tab
+ERREURS FREQUENTES : 
+
+    - Jamais de lien <a> dans les <button> :  Un lien est fait pour acceder a du contenu
+le bouton est fait pour effectuer une action
+    - Jamais de lien dans un lien: .
+    - Jamais de DIV dans une Liste : mais l'inverse est possible
+
+
+FAIRE UN AUDIT : 
+
+    - HTML via un validator HTML
+    - De la page complete via LightHouse de l'outil d'inspection (décocher Progressive Web App)
+
