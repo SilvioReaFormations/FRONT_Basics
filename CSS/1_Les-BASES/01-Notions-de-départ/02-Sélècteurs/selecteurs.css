@@ -1,0 +1,65 @@
+body {
+  background-color: coral;
+}
+
+/* Règle CSS : 
+Pour déclarer on a toujours : 1 Selecteur, des propriétés et leur Valeur :*/
+h1{
+  color: blue;
+}
+
+
+
+                /* TYPES DE SELECTEUR */
+
+
+/* ELEMENT HTML : avec le nom de l'élément. Par exemple, tous les titres H1 */
+h1{
+  color: blue;
+}
+
+/* CLASSE : avec '.' */
+.title {
+  background-color: aquamarine;
+  color: cornsilk;
+}
+
+/* ID : avec '#' : Spécificité Elevée, il passe avant les classes */
+#title-1 {
+  background-color: crimson;
+}
+
+/* ELEMENT MIXTE : on peut mélanger les types de selecteurs. Peut importe le niveau d'imbrication (enfant, petit enfant, etc)
+ exemple :  Tous les paragraphes dans Container :*/
+.container p {
+  font-size: 30px;
+  color: green;
+}
+
+/* .PARENT .ENFANT  : Sélèction de l'enfant d'une classe parent*/
+.list .list-title {
+  color : blue
+}
+
+/* .CLASSE1.CLASSE2 : Selection précise, sélècteur qui est à la fois la classe1 et la classe2 */
+.title.first-title {
+  padding: 50px;
+}
+
+/* On évite les sélections trop longues : pas plus de 3 Sélècteurs : Utiliser les classes et ID*/
+
+
+
+
+/* SELECTION UNIVERSELLE : avec '*' : Spécificité minimale, les autres sélècteurs passent en prio */
+/* On l'utilise souvent pour RESET */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* On peut aussi l'utiliser dans un élément */
+.container * {
+  background-color: pink;
+}

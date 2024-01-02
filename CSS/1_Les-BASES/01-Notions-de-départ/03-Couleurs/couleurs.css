@@ -1,0 +1,32 @@
+body {
+  background: #333;
+}
+
+.box {
+  width: 250px;
+  height: 250px;
+
+
+                /* LES COULEURS */
+
+/* NAMED COLORS : couleur par défaut */
+  background-color: salmon;
+
+/* RGB */
+background-color: rgb(250, 128, 114);
+
+/* RGBA : RGB avec gestion de l'opacité' */
+background-color: rgba(250, 128, 114, 0.7);
+
+/* HEXADECIMAL */
+background-color: #fa8072;
+
+
+
+
+
+}
+
+
+                
+

@@ -1,0 +1,68 @@
+p {
+  font-size: 45px;
+
+
+
+
+                  /* MARGIN */
+  
+  /* C'est l'espace qui se situe ENTRE LES ELEMENTS */
+
+  /* Haut, Droite, Bas, Gauche */
+  margin: 20px;
+
+  /* Haut/bas, Cotés */
+  margin: 20px 20px;
+
+  /* Haut, Droite, Bas, Gauche */
+  margin: 20px 20px 20px 20px;
+
+  /* Haut, Cotés, Bas*/
+  margin: 200px 20px 0px;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+
+
+
+                  /* PADDING */
+
+  /* C'est l'espace qui va REMPLIR LES ELEMENTS 
+  S'écrit de la meme manière que la marge*/
+  background-color: red;
+
+
+
+
+                  /* BORDER */
+
+  /* Les BORDURES de chaque élément */
+
+  border-width: 10px;
+  border-style: solid;
+  border-color: blue;
+
+  /* OU */
+
+  border : 10 solid blue;
+
+  /* arrondi */
+  border-radius: 15px; 
+}
+
+
+
+span {
+  background: green;
+  font-size: 50px;
+  
+  /* Le padding top et bottom des éléments inline ne poussent pas les autres éléments inline ou block. */
+  padding: 50px 30px;
+
+  /* Margin top et bottom ne fonctionne pas avec les éléments inline 
+  Mais left et right fonctionne*/
+  margin: 50px 50px;
+}

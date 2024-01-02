@@ -1,5 +1,11 @@
 HTML : HyperText Markup Language
 
+<  :  &lt;
+> : &gt;
+& : &amp;
+ESPACE : &nbsp
+
+
 ERREURS FREQUENTES : 
 
     - Jamais de lien <a> dans les <button> :  Un lien est fait pour acceder a du contenu

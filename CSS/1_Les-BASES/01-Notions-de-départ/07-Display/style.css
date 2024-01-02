@@ -1,0 +1,20 @@
+p {
+  background-color: royalblue;
+  color: #f1f1f1;
+  font-size: 45px;
+  /* Valeur de base pour un <p> */
+
+  /* Transformation en ligne */
+
+  /* Mix des deux */
+
+  /* Disparation visuelle, mais reste dans le DOM */
+}
+
+span {
+  background: green;
+  color: #f1f1f1;
+  font-size: 45px;
+
+  /* On peut changer le display de tous les élémens */
+}
