@@ -3,3 +3,21 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* Les éléments IMG sont INLINE, mais on peut quand meme régler leur largeur */
+img {
+  /* width: 100%; */
+  width: 800px;
+  height: 200px;
+
+  /* Object Fit Cover permets de ne pas déformer l'image si on change ses proportions, cela va tronquer l'image*/
+  object-fit: cover;
+
+  /* Ensuite avec Object position, je peux désigner la partie de l'image à conserver */
+  object-position: top;
+}
+
+.hero-section{
+  height: 100vh;
+  background-image: url("./images/nature.jpg");
+}

@@ -1,4 +1,41 @@
 .box {
+
+    /* CONTENT BOX : La taille de ma box (300px) ne prendra pas en compte le border
+    et le margin, qui seront ajouter en plus de cette taille */
+    box-sizing: content-box;
+
     background-color: teal;
     height: 50px;
+    width: 300px;
+    padding: 10px;
+    border: 10px solid yellow;
+    margin: 100px auto;
+
+
+
+    /* BORDER BOX : la taille de ma boxe(300px) sera la taille totale, margin et border comprises 
+    la taille de moncontenu va donc s'adapter en fonction
+    
+    !!! ON UTILISE CELA à 99% DU TEMPS !!! */
+    
+    box-sizing: border-box;
+
+    background-color: teal;
+    height: 50px;
+    width: 300px;
+    padding: 10px;
+    border: 10px solid yellow;
+    margin: 100px auto;
+
+}
+
+p {
+    text-align: center;
+    /* On remarque que ajouter du padding permet d'aligner mon text VERTICALEMENT */
+}
+
+body{
+
+
+    background-color: gray;
 }
