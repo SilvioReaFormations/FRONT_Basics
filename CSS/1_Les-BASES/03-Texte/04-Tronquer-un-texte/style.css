@@ -2,3 +2,16 @@ body {
   background: #222;
 }
 
+p {
+  margin: 100px auto 0;
+  width: 300px;
+  color: aliceblue;
+
+  /* Le texte va sortir de sa box */
+  white-space: nowrap;
+  /* Ce qui dépasse va etre caché */
+  overflow: hidden;
+  /* Ajoute "..." à la place de ce qui dépasse */
+  text-overflow: ellipsis;
+}
+

@@ -20,4 +20,14 @@ img {
 .hero-section{
   height: 100vh;
   background-image: url("./images/nature.jpg");
+
+  /* Lorsque la taille de la fenetre change, l'image reste focus au centre */
+  background-position: center;
+
+  /* Image s'adapte en fonction de la taille de la fenètre */
+  background-size: cover;
+
+  /* Empeche la répétition des images trop petites */
+  background-repeat: no-repeat;
+
 }

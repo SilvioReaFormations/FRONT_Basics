@@ -1,0 +1,16 @@
+/*  Aller chercher des polices sur PIXELIFY, les télécharger 
+et importer le fichier dans le dossier "font"
+
+Il suffit ensuite de déclarer la police avec @font-face
+
+*/
+
+
+@font-face {
+    font-family: "Komikaze";
+    src: url("./font/Komikaze.ttf");
+}
+
+h1 {
+    font-family: Komikaze, Times, serif;
+}

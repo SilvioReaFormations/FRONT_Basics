@@ -1,0 +1,9 @@
+/* Ajouter des font family via google font
+lien a ajouter dans html */
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Lemon', serif;
+}
+
+/* Faire des recherche de FONT PAIRING sur google afin de savoir avec quoi associer ma nouvelle police */

@@ -4,3 +4,18 @@
   padding: 0;
 }
 
+html, body {
+  height: 100%;
+}
+
+
+video {
+  height: 100%;
+  width: 100%;
+
+  object-fit: cover;
+
+  /* Ici le display block permet de supprimer la petite barre horizontale en bas de la video */
+  display: block;
+}
+
