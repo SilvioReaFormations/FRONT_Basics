@@ -1,0 +1,43 @@
+.container {
+  width: 600px;
+  margin: 0 auto;
+  background: blueviolet;
+}
+
+.box {
+  height: 200px;
+  width: 80px;
+}
+
+
+/* FLOAT permet de sortir un element du flux classique tout en permetant 
+aux autres éléments HTML de se disposer autour 
+
+La propriété CLEAR définit le côté où les éléments flottants ne sont pas autorisés à s'afficher.
+*/
+
+.box-1 {
+  background: crimson;
+  float: left;
+}
+.box-2 {
+  background: turquoise;
+  float: right;
+}
+
+
+/* BUG DES FLOAT : 
+Dans certains cas, si il n'y a pas de contenu à l'intérieur du container 
+qui enveloppe les éléments que je souhaite faire flotter, mon élément container peut ne pas s'afficher
+(par exemple, dans le cas présent, si on retire le <p>, on aura 2 box a faire flotter, 
+mais plus aucun contenu pour les entourer)
+
+Pour regler ce soucis, il faut appliquer cela : 
+*/
+.container::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+

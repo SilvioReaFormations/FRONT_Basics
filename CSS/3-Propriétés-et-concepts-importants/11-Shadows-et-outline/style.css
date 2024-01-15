@@ -1,0 +1,31 @@
+.box {
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 25px;
+    margin: 0 auto;
+
+    /* BOX SHADOW */
+
+    /* X, Y, FLOU, COULEUR*/
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
+
+    /* On peut ajouter un mot clef */
+    box-shadow: 0 7px 10px inset rgba(0, 0, 0, 0.3);
+}
+
+
+    /* TEXT SHADOW */
+
+h1 {
+    font-size: 50px;
+    color: #f1f1f1;
+    text-shadow: 0 1px 1px rgba(5, 3, 3, 0.3);
+    text-shadow: 0 2px 1px rgba(5, 3, 3, 0.3);
+    text-shadow: 0 3px 1px rgba(5, 3, 3, 0.3);
+}
+
+    /* OUTLINE */
+
+input:focus {
+    outline: 5px solid red;
+}

@@ -1,0 +1,47 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+/* Les PSEUDO ELEMENTS se déclarent avec "::" et permettent de : 
+  - Créer des éléments à l'intérieur d'autres éléments
+  - Sélèctionner certaines parties d'un élément
+*/
+
+
+/* BEFORE / AFTER : créer un nouvel élément Avant/Après le contenu du sélècteur
+Doivent être instancier avec la propriété CONTENT
+Sont Inline par défaut
+*/
+h1::before {
+  content: "=>";
+  background-color: red;
+}
+
+h1::after {
+  content: "<=";
+  display: block;
+  background-color: red;
+}
+
+/* FIRST LINE : Sélèctionne la 1ère ligne */
+p::first-line{
+  background-color: blue;
+}
+
+/* FIRST LETTER : Sélèctionne la 1ère lettre */
+p::first-letter {
+  font-size: 45px;
+}
+
+/* SELECTION : Lorsque qu'on sélèctionne à la souris */
+p::selection {
+  background-color: rgb(192, 16, 71);
+  
+}
+

@@ -1,0 +1,85 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #222;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f1f1f1;
+}
+.box {
+  height: 150px;
+  font-size: 45px;
+  margin-bottom: 20px;
+  background: crimson;
+  color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Le %tage est toujours PAR RAPPORT AU PARENT */
+.percentage {
+  width: 40%;
+}
+
+
+
+/* Le pixel est une valeur absolue et n'est relatif à rien */
+.pixels {
+  width: 400px;
+}
+
+
+
+/* Le ViewPort fait référence à la taille de la fenètre
+vmin et vmax font référence au coté de la fenetre le plus petit/grand 
+*/
+
+/* VIEWPORT WIDTH (largeur de la fenetre) */
+.vw {
+  width: 50vw;
+  /* width: 50vmin;
+  width: 50vmax; */
+}
+
+/* VIEWPORT HEIGHT (heuteur de la fenetre) */
+.vh {
+  width: 500px;
+  height: 50vh;
+
+}
+
+
+
+/* TEXTE */
+
+/* Pixel toujours une unité absolue */
+.pixel-txt {
+  font-size: 50px;
+}
+
+
+/* EM est une unité relative au parent : 
+2 EM = 2 fois le parent */
+.parent {
+  font-size: 50px;
+}
+.child {
+  font-size: 2em;
+}
+
+
+/* REM fait référence à l'ELEMENT RACINE (html qui est de base à 16px normalement)
+Il est ENORMEMENT UTILISE car bcp de personnes (malvoyantes par exemple) utilisent 
+les settings du navigateur pour regler la fontSize de base du navigateur.
+Si on fixe la fontsize avec une valeur en pixel (valeur absolue), cette fonctionnalité 
+ne fonctionnera pas.
+*/
+.rem {
+  font-size: 2rem;
+}
+
+

@@ -1,0 +1,19 @@
+/* On va déclarer les Custom Properties dans la pseudo classe ROOT
+C'est l'équivalent à html{} mais avec une spécificité moins grande 
+*/
+
+/* Je DECLARE MES VARIABLES DANS ROOT */
+:root {
+    --primary-color:coral;
+    --text-color:#222;
+}
+
+
+/* JE LES UTILISE DANS VAR() */
+body {
+    background-color: var(--primary-color);
+}
+
+h1 {
+    color: var(--text-color);
+}

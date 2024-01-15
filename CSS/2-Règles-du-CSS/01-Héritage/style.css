@@ -1,0 +1,23 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    color: red;
+}
+
+button {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+
+.card {
+    color: green;
+    padding: 20px;;
+}
+
+/*  Avec INHERIT, je peux forcer l'héritage d'une propriété du parent, si elle n'hérite pas à la base 
+    Avec INITAL, on supprimer l'heritage d'un propriété du parent */
+.card p{
+    padding: inherit;
+    color: initial;
+}
+

@@ -29,8 +29,15 @@ h1{
   background-color: crimson;
 }
 
+/* Assembler plusieurs sélections avec la virgule (,) */
+/* Ex : Tous les h1 ET tous les h2 ET tous les paragraphes. */
+h1, h2, p {
+  color: crimson;
+} 
+
+
 /* ELEMENT MIXTE : on peut mélanger les types de selecteurs. Peut importe le niveau d'imbrication (enfant, petit enfant, etc)
- exemple :  Tous les paragraphes dans Container :*/
+ exemple :  Tous les paragraphes dans les classes "Container" :  */
 .container p {
   font-size: 30px;
   color: green;
@@ -63,3 +70,6 @@ h1{
 .container * {
   background-color: pink;
 }
+
+
+

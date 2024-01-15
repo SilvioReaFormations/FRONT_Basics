@@ -1,0 +1,121 @@
+/* Sélecteur universel et simple reset */
+
+
+/*   " * " a une spécifité de 0  
+Selectionne TOUT SAUF les pseudos éléments*/
+*, ::after, ::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* Par type : p, h1, form */
+h1{
+  color: blue;
+}
+
+
+
+/* Par classe / id */
+.title {
+  background-color: aquamarine;
+  color: cornsilk;
+}
+
+
+
+/* Combinaison */
+
+/* Element qui a la classe et l'ID en meme temps */
+.title#title-1 {
+  background-color: aquamarine;
+  color: cornsilk;
+}
+/* Element qui à l'ID et DANS la classe */
+.title #title-1 {
+  background-color: aquamarine;
+  color: cornsilk;
+}
+
+
+
+
+/* Sélecteurs avancés +~> */
+
+/*  "+" => Le PREMIER ELEMENT qui suis le 1er sélècteur (la 1ère liste dans le H1) */
+h1 + ul {
+  background-color: blue;
+}
+
+/*  ">" => TOUS les 1ER ELEMENT qui sont les 1ERS ENFANTS du 1er sélècteur (Tous les LI qui suivent le UL) */
+ul > li {
+  background-color: violet;
+}
+
+/*  "~" =>  TOUS les éléments qui suivent AU MEME NIVEAU le 1er selecteur*/
+li ~ li {
+  background-color: brown;
+}
+
+/* "[]" =>  TOUS les éléments en fonction de leur attribut et de leur valeur */
+input[type = "text"]{
+  background-color: red;
+}
+
+[type] {
+  background-color: green;
+}
+
+
+
+/* Les pseudo-classes de position */
+
+/* PARMIS TOUS LES ENFANTS au meme niveau que le selecteur */
+/* si le 2ème element est un LI au meme niveau (Si le 2ème élément est bien un LI, dans le cas contraire ca ne fonctionne pas*/
+li:nth-child(2) {  /* even / odd */
+  background-color: red;
+}
+
+/* PARMIS TOUS LES ELEMENTS DU MEME TYPE que le selecteur au meme niveau */
+li:nth-of-type(3){
+  background-color: aqua;
+}
+
+/* Le 1ER DE CE TYPE */
+li:first-of-type {
+  background-color: chartreuse;
+}
+
+/* Le DERNIER DE CE TYPE */
+li:last-of-type {
+  background-color: chartreuse;
+}
+
+
+
+
+/* :not() => L'OPPOSE DU SELECTEUR EN PARAMETRE */
+
+/* TOus les éléments qui ne sont pas le 1er qui a un type LI */
+li:not(:first-of-type) {
+  background-color: darkblue;
+}
+
+/* Tous les LI sauf celui qui a la classe .muted */
+li:not(.muted) {
+  background-color: darkblue;
+}
+
+
+
+/* Petit rajout dont je ne parle pas dans la vidéo. */
+
+/* Assembler plusieurs sélections avec la virgule (,) */
+
+/* Ex : Tous les h1 ET tous les h2 ET tous les paragraphes. */
+
+h1, h2, p {
+  color: crimson;
+} 

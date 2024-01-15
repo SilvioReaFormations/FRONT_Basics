@@ -1,0 +1,19 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+
+  /* Ici, on voit que le contenu de la card depasse de sa hauteur max */
+  background: red;
+  width: 400px;
+  height: 200px;
+
+  /* OVERFLOW permet de définir la comportement a adopter quand un enfant dépasse d'un parent */
+  overflow: hidden;
+  overflow-y: scroll;
+  
+}
+

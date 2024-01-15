@@ -1,0 +1,87 @@
+body {
+  background-color: #333;
+  height: 2500px; 
+
+  /* Valeur de base de la position */
+  position: static;
+}
+
+/* Exemple 1. */
+
+.box {
+  width: 150px;
+  height: 150px;
+}
+
+.b1 {
+  background-color: crimson;
+
+  /* Position RELATIVE
+  Donne accès à 5 nouvelles propriétées : Top, Bottom, Left, Right
+  Permet de pousser l'élément à l'opposé de la propriété par rapport à sa position initiale
+   */
+  position: relative;
+  left: 250px;      /* Je pousse vers la droite */
+  top:550px;        /* Je pousse vers le bas */
+}
+
+.b3 {
+  background-color: skyblue;
+
+  /* Position FIXED 
+  Place TOUJOURS l'élément par rapport au bloc initial
+  L'élément ne bougera jamais, meme si on scroll sur la fenètre*/
+  position: fixed;
+  top: 50px;
+  left: 100px;
+}
+
+.b4 {
+  background-color: cornsilk;
+
+  /* Position STICKY 
+  Place TOUJOURS l'élément par rapport au bloc initial
+  L'élément se déplacera avec la fenètre quand le haut de la fenetre atteindra la valeur
+  de sa propritée TOP
+  */
+  position: sticky;
+  top: 100px;
+  left: 250px;
+}
+
+.b2 {
+  background-color: yellowgreen;
+
+  /* Position ABSOLUTE
+  Elle SORT L'ELEMENT DU FLUX
+  Permet de se déplacer par rapport à son parent SI IL EST POSITIONNE (position:"autre que static"). 
+  Si le parent n'est pas positionné, dans ce cas l'élément se déplacera par rapport 
+  aux dimensions du bloc initial (viewport) */
+
+  /* Exemple 1 */
+  position: absolute;
+  top: 10px;        /* A 10 du haut */
+  right: 60px;      /* A 60 de la droite */
+
+}
+
+
+/* Exemple 2 */
+
+/* Ici mon child se placera par rapport à son parent QUE SI LE PARENT EST POSITIONNE 
+Si je supprime la position relative du parent, le child se place par rapport au viewport*/
+
+.parent {
+  width: 200px;
+  height: 200px;
+  background-color: thistle;
+  position: relative;
+}
+.child {
+  width: 50px;
+  height: 50px;
+  background: crimson;
+
+  position: absolute;
+  right: 0px;
+}

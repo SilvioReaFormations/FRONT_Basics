@@ -8,3 +8,41 @@ body {
   font-family: Inter, Helvetica, sans-serif;
   background: #ededed;
 }
+
+.container{
+  max-width: 35%;
+  margin: 50px auto;
+  border-radius: 15px;
+  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.container img{
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.carte {
+  padding: 20px 25px;
+}
+
+#description{
+  margin: 15px auto; 
+}
+
+.config{
+  line-height: 1.5;
+  font-weight: bold;
+
+}
+
+button {
+  background-color: #3c31b6;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  margin: 25px auto 0;
+  color : #fff;
+  border-radius: 5px;
+}

@@ -1,0 +1,80 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 50px;
+}
+/* 1. */
+.card {
+  width: 275px;
+  height: 275px;
+  position: absolute;
+  font-size: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Le Z-INDEX permet de gérer la priorité des empilements
+je peux choisir l'ordre dans lequel les éléments vont se superposer 
+Plus la valeur est forte, plus l'élément sera au dessus des autres*/
+
+.c3 {
+  background-color: violet;
+  top: 80px;
+  left: 80px;
+  z-index: 1;
+}
+.c1 {
+  background-color: crimson;
+  top: 60px;
+  left: 60px;
+  /* Ici c'est le 2 qui est le plus haut */
+  z-index: 2;
+}
+
+
+
+
+/* Z-INDEX NEGATIF */
+
+.c2 {
+  background-color: lightblue;
+  top: 70px;
+  left: 70px;
+  /* z-index negatif va se placer en dessous de tous les autres 
+  mais toujours au dessus de son parent si ce dernier a un zindex aussi
+  sinon il se placera juste au dessus du viewport*/
+  z-index: -1;
+}
+
+
+/* autre exemple */
+
+/* Certaines propriété vont créer des contextes d'epilement */
+.parent{
+  background-color: blue;
+  width: 250px;
+  height: 250px;
+  z-index: 1;
+  /* position: relative; */
+  transform: rotate(45deg);
+  opacity: 0.59;
+
+}
+
+.enfant{
+  background-color: red;
+  width: 100px;
+  height:100px;
+  position: relative;
+  z-index: -1;
+}
+
+
+

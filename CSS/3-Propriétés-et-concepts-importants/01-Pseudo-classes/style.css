@@ -1,0 +1,54 @@
+body {
+  background: #222;
+}
+
+.card {
+  width: 300px;
+  height: 300px;
+  background: orange;
+}
+button {
+  padding: 10px 14px;
+  font-size: 20px;
+}
+input {
+  width: 50px;
+  height: 50px;
+}
+
+
+
+/* Les pseudo-classes servent à selectionner des éléments lors d'un état spécifique 
+(:hover (survol), :checked (coché)) ou encore via leur position dans le DOM (:nth-child, :not).  */
+
+
+/* Quand je SURVOLE mon élément */
+.card:hover {
+  background-color: green;
+  border-radius: 50px;
+  width: 500px;
+  height: 500px;
+}
+
+/* Quand je CLIQUE en RESTANT APPUYE */
+.card:active{
+  background-color: red;
+}
+
+/* Quand je COCHE*/
+input:checked {
+  accent-color: red;
+}
+
+/* Quand je DONNE LE FOCUS à un élément */
+button:focus{
+  background-color: blue;
+}
+
+/* Quand j'ai DEJA VISITE un lien */
+a:visited {
+  color: crimson;
+  text-decoration-color: green;
+}
+
+
