@@ -1,60 +1,80 @@
-/* 1. Sélectionnez seulement les éléments qui ont les classes "title" ET "main-title" en même temps et donnez-leur un background "khaki" */
+/* 1. Sélectionnez seulement les éléments qui ont les classes "title" 
+ET "main-title" en même temps et donnez-leur un background "khaki" */
+.title.main-title {
+    background-color: khaki;
+}
+
+
+
+
+/* 2. Sélectionnez seulement les h2 qui sont les premiers enfants d'un parent 
+avec la classe ".content" et donnez-leur la couleur "red" */
+.content > h2 {
+    color: red;
+}
 
 
 
 
 
-/* 2. Sélectionnez seulement les h2 qui sont les premiers enfants d'un parent avec la classe ".content" et donnez-leur la couleur "red" */
+/* 3. Sélectionnez tous les éléments qui contiennent la classe "txt" 
+et tous les éléments qui contiennent la classe "article-link" en même temps, 
+et donnez-leur la couleur "darkcyan" */
+[class=txt], [class=article-link] {
+    color: darkcyan;
+}
 
 
 
 
 
-
-/* 3. Sélectionnez tous les éléments qui contiennent la classe "txt" et tous les éléments qui contiennent la classe "article-link" en même temps, et donnez-leur la couleur "darkcyan" */
-
-
-
-
-
-
-/* 4. Sélectionnez seulement le bouton qui contient la classe "modify-btn" et qui est directement précédé par le bouton contenant la classe "delete-btn" et donnez-lui un fond "hotpink" */
+/* 4. Sélectionnez seulement le bouton qui contient la classe "modify-btn" 
+et qui est directement précédé par le bouton contenant la classe "delete-btn" 
+et donnez-lui un fond "hotpink" */
+button.modify-btn {
+    background-color: pink;
+}
 
 
 
 
 
-
-
-/* 5. Sélectionnez les inputs qui contiennent l'attribut type="text" et donnez-leur un fond "slateblue" */
-
-
+/* 5. Sélectionnez les inputs qui contiennent l'attribut type="text" 
+et donnez-leur un fond "slateblue" */
+input[type=text]:focus {
+    background-color: slateblue;
+}
 
 
 
 
 
 /* 6. Sélectionnez le 4ème élément de la liste et donnez-lui un fond "seagreen" */
-
-
-
+li:nth-child(4) {
+    background-color: seagreen;
+}
 
 
 
 
 
 /* 7. Sélectionnez tous les li sauf le 5ème et donnez-leur un fond "midnightblue" */
+li:not(:nth-child(5)) {
+    background-color: midnightblue;
+}
 
 
 
 
 
-
-
-
-
-/* 8. Donnez une couleur de fond "crimson" à la première ligne du dernier paragraphe et augmentez la taille de sa première lettre à 50px */
+/* 8. Donnez une couleur de fond "crimson" à la première ligne du dernier paragraphe 
+et augmentez la taille de sa première lettre à 50px */
 /* Vous avez besoin de faire deux sélections */
-
+.final-txt::first-line {
+    background-color: crimson;
+}
+.final-txt::first-letter {
+    font-size: 50px;
+}
 
 

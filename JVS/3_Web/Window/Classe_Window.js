@@ -64,4 +64,4 @@ let interval = setInterval( () => {
     console.log("Exécution toutes les 5 sec");
 }, 5000);
 
-clearInterval(interval)     // Supprome la référence à mon interval
+clearInterval(interval)     // Supprime la référence à mon interval

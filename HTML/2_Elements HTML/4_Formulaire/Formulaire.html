@@ -19,9 +19,12 @@
             LABEL est le texte qui apparaitra avant l'Input, il est associé à l'ID de l'input pour se lier à lui 
         
             Attributs :
-            name :          labeliser les données par le Serveur  
-            placeholder :   texte par default de l'input 
-            type :          text, email, password ...-->     
+                name :          labeliser les données par le Serveur. 
+                                Quand le formulaire est soumis, les données sont transmises au serveur 
+                                sous forme de paires clé-valeur, où name est la clé 
+                                et la valeur saisie par l'utilisateur est la valeur  
+                placeholder :   texte par default de l'input 
+                type :          text, email, password ... -->     
         <label for="yourName"> Votre nom </label>
         <input type="text" 
         id="yourName" 
@@ -60,8 +63,8 @@
         <label for="accepter">J'accepte les termes et conditions</label>
 
         <!-- RADIO : Permet à l'utilisateur de choisir une option parmi plusieurs.
-        Name doit etre le même
-        Value doit etre differente -->
+                Name doit etre le même
+                Value doit etre differente -->
         <input type="radio" name="genre" value="homme" id="homme">
         <label for="homme">Homme</label>
 
@@ -99,7 +102,7 @@
         <label for="mesFruits"> choisissez votre fruit</label>     
         <select name="fruit" id="mesFruits">
 
-            <!-- valeur par defaut optionnel -->
+            <!-- valeur par defaut (optionnel) -->
             <option value=""> Choissisez votre fruit préféré </option>
 
             <!-- Valeurs à selectionner -->
@@ -135,9 +138,9 @@
     <input type="text" id="name" required>
 
     <!-- MIN/MAX LENGHT => text
-        MIN ET MAX => number -->
+         MIN ET MAX => number -->
     <label for="lastName"> votre prénom</label>
-    <input type="text" id="lasName" minlength="3" maxlength="10" required>
+    <input type="text" id="lastName" minlength="3" maxlength="10" required>
     <label for="age"> votre age</label>
     <input type="number" id="age" min="18" max="100" required>
     

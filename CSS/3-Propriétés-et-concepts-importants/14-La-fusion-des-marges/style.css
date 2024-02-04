@@ -8,11 +8,20 @@ body {
   background: #222;
 }
 
+/*  Si il n'y a aucun contenu entre le parent et l'enfant, les marges fusionnent : 
+    En modifier une modifiera la 2ème... */
+
 .parent {
   max-width: 400px;
   height: 300px;
   margin: 0 auto;
   background-color: orangered;
+
+  /* Si on veut pousser l''enfant dans le parent, mieux vaut utiliser le padding */
+  padding-top: 50px;
+
+  /* Ou sinon ajouter du contenu entre les 2 */
+  
 }
 .child {
   background-color: lightblue;

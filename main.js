@@ -1,9 +1,7 @@
-fetch('https://jsonplaceholder.typicode.com/posts/1')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Erreur réseau');
-    }
-    return response.json();
-  })
-  .then(data => console.log(data))
-  .catch(error => console.error('Erreur :', error));
+function methodOK (event) {
+  alert("JE PEUX ENTRER SUR LE SITE");
+}
+
+function methodKO (event) {
+  alert("JE NE PEUX PAS ENTRER SUR LE SITE");
+}

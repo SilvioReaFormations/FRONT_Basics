@@ -14,6 +14,8 @@
 aux autres éléments HTML de se disposer autour 
 
 La propriété CLEAR définit le côté où les éléments flottants ne sont pas autorisés à s'afficher.
+
+SHAPE-OUTSIDE permets de définir l'écoulement (la forme) du texte autour d'un élément flottant (cf exercice "Image-texte")
 */
 
 .box-1 {

@@ -1,0 +1,23 @@
+/* TECHNIQUE DE L'ESCALIER */
+
+body {
+    font-size: 65px;
+}
+
+@media (max-width : 1200px){
+    h1 {
+        font-size: 45px;
+    }
+}
+
+@media (max-width : 900px){
+    h1 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width : 600px){
+    h1 {
+        font-size: 15px;
+    }
+}

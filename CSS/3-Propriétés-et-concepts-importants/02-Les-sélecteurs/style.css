@@ -73,7 +73,8 @@ input[type = "text"]{
 /* Les pseudo-classes de position */
 
 /* PARMIS TOUS LES ENFANTS au meme niveau que le selecteur */
-/* si le 2ème element est un LI au meme niveau (Si le 2ème élément est bien un LI, dans le cas contraire ca ne fonctionne pas*/
+/* si le 2ème element est un LI au meme niveau (Si le 2ème élément est bien un LI, dans le cas contraire ca ne fonctionne pas
+Si il y a plusieurs liste, va sélectionner tous les 2ème éléments de chaque liste*/
 li:nth-child(2) {  /* even / odd */
   background-color: red;
 }
@@ -98,7 +99,7 @@ li:last-of-type {
 
 /* :not() => L'OPPOSE DU SELECTEUR EN PARAMETRE */
 
-/* TOus les éléments qui ne sont pas le 1er qui a un type LI */
+/* Tous les éléments qui ne sont pas le 1er qui a un type LI */
 li:not(:first-of-type) {
   background-color: darkblue;
 }

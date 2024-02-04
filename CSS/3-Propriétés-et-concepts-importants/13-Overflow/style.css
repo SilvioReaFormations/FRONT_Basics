@@ -11,7 +11,7 @@
   width: 400px;
   height: 200px;
 
-  /* OVERFLOW permet de définir la comportement a adopter quand un enfant dépasse d'un parent */
+  /* OVERFLOW permet de définir le comportement a adopter quand un enfant dépasse d'un parent */
   overflow: hidden;
   overflow-y: scroll;
   

@@ -51,6 +51,8 @@ p {
 
   /* arrondi */
   border-radius: 15px; 
+  /* Transformer le bloc CARRE en bloc CERCLE */
+  border-radius: 50%;
 
   /* ombre : 
   H, V, Flou, Couleur

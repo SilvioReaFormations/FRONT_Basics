@@ -1,0 +1,143 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  background: #333;
+  color: #f1f1f1;
+}
+
+
+p {
+  font-size: 35px;
+}
+
+
+/* max-width = en dessous de xxx */
+@media (max-width : 1000px){
+  .txt-1 {
+    color: yellow;
+  }
+}
+
+
+
+/* min-width = au-dessus de xxx */
+@media (min-width : 1000px){
+  .txt-2{
+    color: red;
+  }
+  
+}
+
+
+/* height = EXACTEMENT UNE HAUTEUR DE */ 
+@media (height : 600px){
+  .txt-1{
+    background-color: coral;
+  }
+  
+}
+
+
+
+/* width = EXACTEMENT UNE LARGEUR DE */
+@media (width : 600px){
+  .txt-2{
+    background-color: coral;
+  }
+  
+}
+
+
+
+
+/* all(défaut), screen, print */
+@media screen and (max-width : 1000px){
+  .txt-1 {
+    color: yellow;
+  }
+}
+
+
+
+
+/* Seulement quand hover est supporté, pas en mode mobile */
+@media (hover: hover){
+  .txt-1 {
+    background-color: darkorange;
+  }
+}
+
+
+
+
+/* Orientation du téléphone / Tablette */
+@media (orientation: landscape){
+  body {
+    background-color: darkorange;
+  }
+}
+
+@media (orientation: portrait){
+  body {
+    background-color: darkolivegreen;
+  }
+}
+
+
+
+
+                    /* opérateurs and, not, ",", only */
+
+
+
+
+/* and pour créer des intervalles 
+Il faut que TOUTES les conditions soient respectées*/
+@media (min-width : 800px) and (max-width : 1000px){
+  .txt-1 {
+    color: rgb(28, 196, 126);
+  }
+}
+
+
+
+/* not pour la négation */
+@media not (max-width : 1000px){
+  .txt-1 {
+    color: rgb(50, 28, 196);
+  }
+}
+
+
+
+/* la virgule "," pour assembler plusieurs medias 
+Il faut que l'UNE des conditions soit respectée*/
+@media (min-width : 800px), (height : 500px){
+  .txt-1 {
+    color: darkgreen;
+  }
+}
+
+
+
+
+
+
+/* prefers-color-scheme pour le dark / light mode*/
+
+
+
+
+
+/* coarse = grossier = petit écran(doigt) */
+
+
+
+
+
+
