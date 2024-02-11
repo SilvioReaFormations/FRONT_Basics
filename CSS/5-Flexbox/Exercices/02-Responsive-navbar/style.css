@@ -8,3 +8,63 @@ body {
   background: #222;
   font-family: Open sans, Helvetica, sans-serif;
 }
+
+img {
+  max-width: 25px;
+}
+
+.container {
+  background-color: aliceblue;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+.button {
+  display: none;
+}
+
+/* nav, h2, .logo {
+  flex-grow: 1;
+} */
+
+h2 {
+  margin-right: 150px;
+}
+
+@media (max-width : 750px){
+  h2 {
+    margin-right: 0;
+  }
+  .button {
+    display: block;
+  }
+  a{
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    width: 100%;
+    background-color: aqua;
+    left: 0;
+    height: 500px;
+    top: 50px;
+    transition: transform 0.4s ease-out;
+    transform: translateX(-100%);
+  }
+
+  .active {
+    transform: translateX(0%);
+  }
+
+
+
+}

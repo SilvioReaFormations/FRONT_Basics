@@ -1,0 +1,123 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 150px;
+}
+.item {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  background-color: blue;
+  color: aliceblue;
+}
+
+.grid {
+  /* Pour activer CSS GRID = display : grid */
+  display: grid;
+
+
+
+  /* On va pouvoir créer des colonnes et des lignes, les items de la grid vont s'y disposer automatiquement */
+
+  /* GRID-TEMPLATE-COLUMN : Pour créer des colonnes
+  En général, c'est suffisant pour utiliser CSS GRID car les lignes vont se créer automatiquement 
+  en fonction du nombre d'items dans la grid, et les items vont se positionner automatiquement.
+  */
+  grid-template-columns: 200px 200px;
+
+  /* GRID-TEMPLATE-ROWS : pour créer des lignes 
+  En cas de besoin, on peut créer des lignes / modifier les lignes existantes*/
+  grid-template-rows: 200px 500px;
+
+
+
+  /* Grid GAP : espacer les items */
+  grid-gap: 5px;
+
+
+
+
+  /*  Les RANGEES IMPLICITES sont créer automatiquement si mon nombre d'items devient supérieur à la capacité de la grid */
+
+  /* GRID AUTO ROWS permet de définir la taille des RANGEES IMPLICITES qui sont crées */
+  grid-auto-rows: 250px;
+
+  /* GRID AUTO FLOW COLUMN permet de créer des COLONNES IMPLICITES à la place des rangées
+  Elles vont se partager tout l'espace restant*/
+  grid-auto-flow: column;
+
+  /* GRID AUTO COLUMNS permet de définir la taille des COLONNES IMPLICITES qui sont crées */
+  grid-auto-columns: 250px;
+}
+
+
+
+
+/* FRACTIONAL UNIT (fr) est une unité de mesure qui permet aux items d'occuper l'espace restant en fonction de leur nombre de fr 
+Par exemple : 
+  - Si on décide de diviser l'espace restant en 3 fr et que les 3 colonnes possèdent 1fr chacune, 
+  elle se divise l'espace restant a elle 3
+  - Si on décide de diviser l'espace restant en 3 fr et qu'une colonne possède 2fr et une autre 1, 
+  la première va prendre les 2/3 de l'espace restant,
+  la deuxième va prendre le 3ème tier, et la dernière n'occupera pas l'espace restant
+*/
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 200px;
+  grid-template-rows: 200px 200px;
+  grid-gap: 5px;
+}
+
+
+
+/* GRID TEMPLATE permet de regrouper les column et rows, séparés par "/"  */
+.grid {
+  display: grid;
+  grid-template: 200px 200px 1fr / 200px 200px;
+  grid-gap: 5px;
+}
+
+
+
+
+/* REPEAT permet d'éviter de répéter la création de colonne et de ligne */
+
+.grid {
+  display: grid;
+  /* Au lieu d'écrire */
+  grid-template: 200px 200px 1fr / 200px 200px;
+
+  /* on peut écrire : */
+  grid-template: repeat(2, 200px) 1fr / repeat(2, 200px);
+}
+
+
+
+
+.grid {
+  /* MIN/MAX CONTENT permet de créer des cellules de la taille min/max de leur contenu */
+  grid-template-columns: max-content 200px min-content;
+
+  /* Fontion MINMAX() permet de définir une taille FIXE à partir d'une certaine longueur d'écran 
+Par exemple : Je crée 2 colonnes qui se partaget toute la place avec 1fr chacune,
+mais la 2ème colonne ne diminuera plus de taille si l'écran passe en dessous de 800px*/
+  grid-template-columns: 1fr minmax(800px, 1fr);
+
+
+
+  
+  /* AUTO FIT va créer autant de colonnes qu'il y a d'items dans la grille */
+  grid-template-columns: repeat(auto-fit, 200px);
+
+  /* AUTO FILL va créer autant de colonnes qu'il y a d'items dans la grille MAIS
+va aussi remplir l'espace restant de RANGEES IMPLICITES */
+  grid-template-columns: repeat(auto-fill, 200px);
+}

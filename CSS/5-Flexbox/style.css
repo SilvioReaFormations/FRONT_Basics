@@ -1,0 +1,148 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #222;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 150px;
+}
+
+                                /*  FLEXBOX  */
+
+                              
+/* COMPORTEMENTS PAR DEFAUT : 
+
+      - MAIN AXE : axe sur lequel les éléments vont s'aligner
+      - CROSS AXE : axe secondaire 
+      Le main axe change en fonction de la direction (colonne ou rangée)
+
+      - Les éléments flex prennent toute la longueur et la largeur de leur contenu 
+  si on ne définit pas une width/heigth spécifique 
+      - flex-direction: ROW 
+      - flex-shrink : 1 => La taille des flex items va s'adapter en fonction du container.
+    Plus il y a d'éléments dans le container, plus ils seront petits pour tous rentrer
+      - flex-wrap: nowrap => Les items ne vont pas automatiquement à la ligne 
+      quand ils arrivent au bout du container; 
+      - flex-grow: 0 => les items ne vont pas occuper la place restante sur l'axe principale 
+    
+    */
+
+
+                       /* PROPRIETE DU CONTAINER  */
+
+.flex-container {
+  max-width: 600px;
+  margin: 0 auto;
+  height: 400px;
+  background: wheat;
+  padding: 10px;
+  border-radius: 5px;
+
+
+  /* POUR UTILISER FLEXBOX, il faut passer le container en display:flex */
+  display: flex;
+  
+
+  /* GAP : ajoute un écart entre tous les éléments flex*/
+  gap: 10px;
+
+
+  /* JUSTIFY-CONTENT : gère l'alignement sur le MAIN AXE (x par défaut) 
+
+      center, space-between, flex-end 
+      Va les centrer SUR X, les espacer SUR X, les ranger d'un coté SUR X, etc...*/
+  justify-content: space-around;        
+
+
+  /* ALIGN-ITEMS : gère l'alignement sur leCROSS AXE (y par défaut)
+    center, flex-end, etc... */
+  align-items: center;
+
+
+  /* FLEX-DIRECTION : va INVERSER LES AXES
+    row (par defaut) = main axe devient x
+    column = main axe devient y; */
+  flex-direction: column;
+  flex-direction: column-reverse;
+
+
+  /* FLEX-WRAP : Les éléments ne changent pas de taille via le flex-shrink : 1.
+  defaut : nowrap 
+  Avec WRAP, au lieu de changer de taille pour s'adapter a la largeur du container, ils vont à la ligne */
+  flex-wrap: wrap;
+
+
+/* ALIGN-CONTENT : Gére l'écart entre les rangées/colonnes qui sont PASSEES A LA LIGNE  */
+  /*  flex-start, center, space-between  */
+  align-content: center;
+
+
+/* flex-flow: Propriété raccourcis de flax-wrap et flex-direction */
+}
+
+
+
+
+                       /* PROPRIETE DES ENFANTS  */
+
+
+
+.flex-item {
+  width: 100px;
+  height: 100px;
+  background: crimson;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 35px;
+  color: #f1f1f1;
+  font-weight: bold;
+
+
+  /* ALIGN-SELF : va gérer le POSITIONNEMENT de l'item sur le CROSS AXE */
+  /* On peut changer son positionnement en modifiant les valeurs */
+  align-self: center;
+
+  /* par defaut align-self: stretch qui va etirer l'item */
+  /* SI L'ITEM A DEJA UNE WIDTH DE DEFINIE, ajouter width: auto; pour l'annuler 
+  et laisser le align-self: strech faire son oeuvre */
+  align-self: stretch;
+  
+
+
+  /* FLEX-GROW : Va gérer l'espace restant sur le MAIN AXE 
+  Par defaut, on a flex-grow: 0; qui va laisser l'espace restant intacte
+  
+  Avec flex-grow: 1; tout l'espace restant va etre diviser entre les différents items de l'axe, 
+  afin qu'ils prennent toute la place disponible
+  possibilité de gérer le grow pour chaque item indépendamment, plus la valeur est élevé, 
+  plus il sera prioritaire pour occuper l'espace restant */
+  flex-grow: 1;
+
+
+  /* FLEX-SHRINK : Va gérer la taille des items en fonction de celle du container 
+  Par defaut, on a flex-shrink : 1 qui va réduire la taille des items pour qu'ils s'adaptent à la taille du container
+  Si on réduit la taille de la fenètre, ces items vont se réduire en priorité par rapport aux flex-shrink:0
+  
+  Avec flex-shrink:1, ils ne vont plus rétrécir, et dépasser le container si aucun retour à la ligne (flex-wrap: wrap;)
+  n'a été configuré */
+  flex-shrink: 0;
+
+}
+
+/* ORDER : pour changer précisement l'ordre d'affichage des items sur le MAIN AXE 
+Il faut l'indiquer DANS CHAQUE ITEMS pour que cela fonctionne*/
+
+.item-1 {
+  order: 3;
+}
+.item-2 {
+  order : 1
+}
+.item-3 {
+  order: 2;
+}
