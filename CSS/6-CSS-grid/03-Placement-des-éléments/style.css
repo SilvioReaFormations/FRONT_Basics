@@ -47,6 +47,45 @@ Cela va DECALER LES AUTRES ITEMS SUR LA GRILLE et créer des RANGEES IMPLICITES 
 
   /* Ecriture raccourci ++ 
   startRow, startCol, endRow, endCol*/
-  grid-area: 1, 1, 2, 4;
+  grid-area: 1 / 1 / 2 / 4;
   
+}
+
+
+
+                /* DEPLACEMENT DE LA GRILLE */
+
+.grid {
+  height: 800px; /* j'ai défini une hauteur à ma grille pour augmenter le contenu disponible */
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 200px 200px;
+  grid-gap: 5px;
+    
+
+  /* DEPLACER LA GRILLE SUR X */
+  justify-content: center;
+  /* DEPLACER LA GRILLE SUR Y */
+  align-content: center;
+}
+
+
+                  /* DEPLACEMENT DES ITEMS DANS LA GRILLE */
+
+/* Par défaut, les items dans une cellule prennent toute la place de cette dernière en hauteur et largeur
+Mais je peux choisir de les placer précisement A L'INTERIEUR DE LEUR CELLULE*/
+
+/* GERER TOUS LES ITEMS */
+.item{
+  justify-content: flex-end; 
+  align-content: flex-end;
+}
+
+/* GERER LES ITEMS 1 par 1*/
+.item-1 {
+  /* Je peux leur définir une taille mais ce n'est PAS OBLIGATOIRE */
+  width: 50px;
+  height: 50px;
+  justify-self: center;
+  align-self: flex-end;
 }

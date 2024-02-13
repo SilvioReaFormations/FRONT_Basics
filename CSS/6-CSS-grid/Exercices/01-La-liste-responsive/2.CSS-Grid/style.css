@@ -6,8 +6,28 @@
   padding: 0;
 }
 
+
+/* li {
+  width: 250px;
+  list-style: none;
+} */
+
+img {
+  width: 100%;
+}
+
+
 body {
   background: #f1f1f1;
   padding: 140px 0 100px;
+}
+
+.gallery {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  grid-gap: 5px;
+  justify-content: center;
 }
 

@@ -58,10 +58,13 @@ footer a {
 }
 
 @media (max-width: 992px) {
-  .container {
+  .container *{
     display: block;
   }
   nav a {
     display: inline;
+  }
+  nav {
+    margin: 5px 0;
   }
 }

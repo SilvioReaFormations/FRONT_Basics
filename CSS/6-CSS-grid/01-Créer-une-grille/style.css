@@ -107,7 +107,7 @@ Par exemple :
   grid-template-columns: max-content 200px min-content;
 
   /* Fontion MINMAX() permet de définir une taille FIXE à partir d'une certaine longueur d'écran 
-Par exemple : Je crée 2 colonnes qui se partaget toute la place avec 1fr chacune,
+Par exemple : Je crée 2 colonnes qui se partagent toute la place avec 1fr chacune,
 mais la 2ème colonne ne diminuera plus de taille si l'écran passe en dessous de 800px*/
   grid-template-columns: 1fr minmax(800px, 1fr);
 

@@ -7,3 +7,55 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+header {
+  height: 40px;
+  background-color: orange;
+  text-align: center;
+  vertical-align: center;
+  padding: 10px 0;
+  grid-area: 1 / 1 / 2 / 4;
+}
+nav {
+  background-color: aqua;
+  gap: 5px;
+  padding: 20px;
+}
+nav a {
+  display: block;
+}
+main{
+  background-color: grey;
+}
+aside {
+  background-color: green;
+}
+footer {
+  height: 30px;
+  background-color: blue;
+  text-align: center;
+  padding: 5px 0;
+  grid-area: 3 / 1 / 4 / -1;
+}
+footer a {
+  color: aliceblue;
+}
+
+.container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 10px;
+  min-height: 100vh;
+}
+
+@media (max-width : 800px){
+  .container {
+    display: block;
+  }
+  nav a {
+    display: inline;
+  }
+
+}
