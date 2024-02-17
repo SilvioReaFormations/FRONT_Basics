@@ -74,7 +74,7 @@ input[type = "text"]{
 
 /* PARMIS TOUS LES ENFANTS au meme niveau que le selecteur */
 /* si le 2ème element est un LI au meme niveau (Si le 2ème élément est bien un LI, dans le cas contraire ca ne fonctionne pas
-Si il y a plusieurs liste, va sélectionner tous les 2ème éléments de chaque liste*/
+Si il y a plusieurs listes, va sélectionner tous les 2ème éléments de chaque liste*/
 li:nth-child(2) {  /* even / odd */
   background-color: red;
 }

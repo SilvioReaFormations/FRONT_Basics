@@ -1,0 +1,150 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f1f1f1;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 150px;
+}
+button{
+  margin: 40px 0;;
+}
+
+                                    /* 1ER BOUTON */
+/* Le but sera de faire passer mon bouton d'un fond noir/texte blanc à un fond blanc/texte noir */
+
+.btn-1{
+  font-size: 50px;
+  padding: 35px 45px;
+  border-radius: 3px;
+  border: 3px solid #111;
+  color: #f1f1f1;
+
+  /* Je le passe en position relative pour que ses enfants qui seront en absolue soient relatifs à lui */
+  position: relative;
+  /* Transforme en contexte d'empilement */
+  z-index: 1;
+
+  /* Ajoute une transition : passage d'un texte blanc à un texte noir*/
+  transition: color 0,4s ease-out;
+
+  /* Va permettre de caché la partie */
+  overflow: hidden;
+}
+.btn-1:hover{
+  color: #111;
+}
+
+/* Ajout d'un pseudo-élément après que je place SOUS l'élément de base */
+.btn-1::after{
+  content: "";
+  background-color: #111;
+  /* Je le sors du flux */
+  position: absolute;
+  /* Je le positionne exactement à la meme place que l'élément de base */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* je le passe dessous */
+  z-index: -1;
+  /* Je lui applique une transition */
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn-1:hover::after {
+  transform: translateY(-100%);
+}
+
+
+
+                                   /* 2EME BOUTON */
+
+
+.btn-2{
+  font-size: 50px;
+  padding: 35px 45px;
+  border-radius: 3px;
+  border: 3px solid #111;
+  color: #f1f1f1;
+
+  /* Je le passe en position relative pour que ses enfants qui seront en absolue soient relatifs à lui */
+  position: relative;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.btn-2::before, .btn-2::after {
+  content: "";
+  /* Je le sors du flux */
+  position: absolute;
+  /* Je le positionne exactement à la meme place que l'élément de base */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn-2::before{
+  border: 2px solid #111;
+}
+.btn-2::after {
+  background-color: #111;
+  z-index: -1;
+}
+
+/* Quand je passe ma souris, ma bordure va s'agrandir */
+.btn-2:hover::before {
+  transform: scaleY(1.1) scaleX(1.05);
+}
+/* Quand je passe ma souris, mon item va rétrécir */
+.btn-2:hover::after {
+  transform: scaleY(0.9) scaleX(0.95);
+}
+
+
+                            /* 3EME ANIMATION */
+
+
+
+.link {
+  font-size: 50px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #111;
+  position: relative;
+}
+
+/*  Je crée une ligne qui s'affiche APRES mon élément (en dessous) */
+.link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: red;
+  
+  /* Je configure ma transition : je veux que sa taille passe à 0 sur X */
+  transform: scaleX(0);
+  transition: transform 0.3s ease-out;
+}
+
+/* Quand je survole ce nouvel élément, je veux qu'il apparaisse */
+.link:hover::after {
+  transform: scaleX(1);
+}
+
+

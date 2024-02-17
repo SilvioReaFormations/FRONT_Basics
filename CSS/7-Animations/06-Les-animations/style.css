@@ -1,0 +1,76 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #222;
+  padding-top: 140px;
+}
+
+/* Les Animations sont des TRANSITIONS PLUS COMPLEXES */
+
+.box {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  background-color: orangered;
+  border: 5px solid;
+
+  /* 1 - Configuration de l'animation */
+
+  /* son nom */
+  animation-name: spin;
+  /* sa durée */
+  animation-duration: 2s;
+  /* façon dont l'animation s'exécute */
+  animation-timing-function: ease-in-out;
+  /* comportement une fois l'animation terminée (arrivée à 100%)*/
+      /* revient a la position initiale */
+  animation-fill-mode: backwards; 
+      /* reste à la position finale */
+  animation-fill-mode: forwards;
+  /* nombre de répétition */
+  animation-iteration-count: 3;
+  animation-iteration-count: infinite;
+
+}
+
+
+/* 2 - Création de l'animation 
+On va gérer les "breackpoints" : les differentes frames de notre animation (de 0 à 100%)*/
+@keyframes spin {
+  /* from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(45deg);
+  } */
+  0% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(45deg);
+    background-color: red;
+  }
+  100% {
+    transform: rotate(300deg);
+    background-color: blue;
+  }
+}
+
+
+/* A SAVOIR : le 0% est optionnel et Si on ne configure pas le breackpoint jusqu'a 100%, les %tages
+d'animation restant se feront dans le sens invers pour retrouver la valeur initiale
+Meme si on a configuré animation-fill-mode*/
+
+/* @keyframes spin {
+
+  20% {
+    transform: rotate(45deg);
+  }
+
+} */
+
+

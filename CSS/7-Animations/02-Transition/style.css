@@ -1,0 +1,53 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #222;
+  padding-top: 200px;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  background: orangered;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+
+  /* TRANSITION : PASSAGE ENTRE 2 ETATS
+  
+  Plusieurs étapes à une transition */
+
+  /* 1 - Indiquer la propriété à transitionner */
+  transition-property: transform;
+
+  /* 2 - Configurer la transition */
+  /* Délais */
+  transition-delay: 0.5s;
+  /* Durée */
+  transition-duration: 0.3s;
+  /* Vitesse 
+  visiter page "easing-function" de la doc mdn*/
+  transition-timing-function: ease-out;
+  /* Via le site cubic-bezier, on peut définir notre propre courbe et la coller en valeur */
+  transition-timing-function: cubic-bezier(0,1,1,-0.01);
+
+  /* PROPRIETE RACCOURCI => On peut CUMULER LES TRANSITIONS*/
+  transition: transform 0.3s ease-out, background-color 0.3s ease-out, font-size 0.3s ease-out;
+
+}
+
+/* 3 - Indiquer les propriétés qui doivent se faire transitionner */
+.box:hover {
+  transform: rotate(45deg);
+  font-size: 50px;
+  background-color: blue;
+}
+

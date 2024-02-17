@@ -16,6 +16,9 @@ h1 {
 
 /* BEFORE / AFTER : créer un nouvel élément Avant/Après le contenu du sélècteur
 Doivent être instancier avec la propriété CONTENT
+
+!!!!! LES ELEMENTS CREER VIA AFTER/BEFORE DEVIENNENT DES ENFANTS DE L'ELEMENT DE BASE !!!!!
+
 Sont Inline par défaut
 */
 h1::before {

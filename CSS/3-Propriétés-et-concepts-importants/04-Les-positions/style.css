@@ -6,12 +6,11 @@ body {
   position: static;
 }
 
-/* Exemple 1. */
-
 .box {
   width: 150px;
   height: 150px;
 }
+
 
 .b1 {
   background-color: crimson;
@@ -64,6 +63,9 @@ body {
   right: 60px;      /* A 60 de la droite */
 
 }
+
+
+
 
 
 /* Exemple 2 */

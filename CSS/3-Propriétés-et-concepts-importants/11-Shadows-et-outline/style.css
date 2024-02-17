@@ -43,7 +43,7 @@ h2 {
     1px 30px 60px #2d2d2d66; */
 }
 
-    /* OUTLINE */
+    /* OUTLINE : bordure qui apparait quand on focus un élément*/
 
 input:focus {
     outline: 5px solid red;

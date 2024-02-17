@@ -1,0 +1,50 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #222;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background: orangered;
+
+
+  /* TRANSLATE : déplacer l'élément */
+  transform: translateX(200px);
+  transform: translateY(200px);
+  transform: translate(200px, 200px) rotate(80deg);
+
+  /* SCALE : Change la taille l'élément */
+  transform: scale(2);
+  transform: scaleX(0);
+
+  /* ROTATE : Pivoter un élément */
+  transform: rotate(45deg);
+  transform: rotateY(45deg);
+
+  /* SKEW : distorsion d'un élément */
+  transform: skew(45deg);
+
+
+  /* NECESSITE d'enchainer les transform sinon il s'écrase. Attention à l'ordre dans lequel on les mets, 
+  si on rotate avant de translate, l'axe de translate va changer */
+  transform: translateX(200px) rotate(45deg);
+
+
+
+  /* TRANSFORM-ORIGIN : changer le point de départ de la transformation (ici une rotation, on parle de son axe)
+  de base il est a 50% 50%, ce qui correspond au contre de l'élément*/
+  transform: rotate(80deg);
+  transform-origin: 50% 50%;
+
+  /* On peut changer cette valeur pour changer l'axe de pivot */
+  transform-origin: top left;
+  transform-origin: 100% 100%;
+
+  
+}
