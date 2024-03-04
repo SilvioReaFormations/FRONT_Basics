@@ -1,0 +1,36 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+
+  /* Le plus simple pour faire un dégradé est d'aller sur les sites 
+  
+  UIGRADIENTS, WEBGRADIENTS, CSSGRADIENTS etc..
+  
+  Mais aussi GRADIENTMAGIC qui est très bien 
+  
+  mais on peut aussi les faire à la main*/
+
+
+  /* Créer un dégradé LINEAIRE*/
+  background-image: linear-gradient(red, blue, yellow);
+
+  /* Choisir son orientation */
+  background-image: linear-gradient(45deg, red, yellow);
+
+  /* Dégradé RADIALE */
+  background-image: radial-gradient(red, yellow);
+
+  /* Dégradé conique */
+  background-image: conic-gradient(red, yellow);
+
+
+}

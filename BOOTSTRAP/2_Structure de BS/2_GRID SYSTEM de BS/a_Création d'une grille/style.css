@@ -1,0 +1,15 @@
+.container {
+    background-color: grey;
+}
+.row {
+    background-color: lightblue;
+}
+.col-n°1 {
+    background-color: green;
+}
+.col-n°2 {
+    background-color: blue;
+}
+.col-n°3 {
+    background-color: yellow;
+}

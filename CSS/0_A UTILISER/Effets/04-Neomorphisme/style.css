@@ -1,0 +1,30 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  background: #e0e0e0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Permet de créer des reliefs en jouant avec les ombres */
+
+/* ALLER SUR LE SITE : https://neumorphism.io/  et implémenter le code*/
+
+.box {
+  width: 200px;
+  height: 200px;
+  margin: 100px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;  
+
+} 
+.box p {
+  font-size: 40px;
+  font-weight: 900;
+}

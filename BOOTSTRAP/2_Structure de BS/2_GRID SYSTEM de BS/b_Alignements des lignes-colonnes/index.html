@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- DOC : https://getbootstrap.com/docs/5.1/layout/columns/ -->
+
+
+                                        <!-- ALIGNEMENT VERTICAL -->
+
+
+
+        <!-- De base, toutes les colonnes vont prendre la hauteur de celle qui a le plus de contenu 
+        Dans cet exemple, toutes les colonnes vont avoir la meme hauteur que la colonne 2 car c'est la plus grande-->
+        <div class="row">
+            <div class="col">
+                <p>colonne 1, paragraphe 1</p>
+                <p>colonne 1, paragraphe 2</p>
+            </div>
+            <div class="col">
+                <p>colonne 2, paragraphe 1</p>
+                <p>colonne 2, paragraphe 2</p>
+                <p>colonne 2, paragraphe 3</p>
+            </div>
+            <div class="col">
+                <p>colonne 3, paragraphe 1</p>
+            </div>
+        </div>
+
+        <!-- Si je souhaite modifier ce comportement pour que mes colonnes n'est pas toute la meme hauteur,
+        il y a plusieurs manières de procéder -->
+
+
+
+        <!-- ROW ALIGN ITEMS
+        permet de gérer l'alignement verticale des colonnes sur une ligne 
+        et pour que toutes ses colonnes aient une taille qui corresponde à leur contenu -->
+
+        <!-- Aligne toutes les colonnes de la ligne en haut -->
+        <div class="row align-items-start"></div>
+
+        <!-- Aligne toutes les colonnes de la ligne au centre -->
+        <div class="row align-items-center"></div>
+
+        <!-- Aligne toutes les colonnes de la ligne en bas -->
+        <div class="row align-items-end"></div>
+
+
+
+
+        <!-- COL ALIGN SELF
+        permet de gérer l'alignement verticale des colonnes INDIVIDUELEMENT
+        et pour que toutes ses colonnes aient une taille qui corresponde à leur contenu -->
+
+        <div class="row">
+            <!-- Aligne la colonne en haut -->
+            <div class="col align-self-start"></div>
+
+            <!-- Aligne la colonne au centre -->
+            <div class="col align-self-center"></div>
+
+            <!-- Aligne la colonne en bas -->
+            <div class="col align-self-end"></div>
+          </div>
+
+
+
+
+                                           <!-- ALIGNEMENT HORIZONTAL -->
+
+
+
+        <!-- Va permettre de gérer l'alignement horizontale des colonnes afin qu'elles occupent l'espace disponible
+        (l'espace disponible correspond aux colonnes qui ne sont pas utilisées sur les 12 fictives)
+    
+        On va ajouter un JUSTIFY CONTENT à la LIGNE-->
+
+        <!-- Alignement à gauche -->
+        <div class="row justify-content-start"></div>
+
+        <!-- Alignement au centre -->
+        <div class="row justify-content-center"></div>
+
+        <!-- Alignement à droite -->
+        <div class="row justify-content-end"></div>
+
+        <!-- Espace disponible reparti entre les colonnes avec marge de moitié -->
+        <div class="row justify-content-around"></div>
+
+        <!-- Espace disponible entre les colonnes uniquement, sans marge-->
+        <div class="row justify-content-between"></div>
+
+        <!-- Espace disponible reparti entre les colonnes avec marge identique -->
+        <div class="row justify-content-evenly"></div>
+        
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

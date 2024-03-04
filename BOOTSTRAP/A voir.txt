@@ -1,0 +1,4 @@
+
+CLASSES BOOTSTRAP A VOIR DANS LA DOC
+
+text-right

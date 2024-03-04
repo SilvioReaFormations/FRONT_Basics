@@ -59,7 +59,7 @@ body {
   justify-content: space-around;        
 
 
-  /* ALIGN-ITEMS : gère l'alignement sur leCROSS AXE (y par défaut)
+  /* ALIGN-ITEMS : gère l'alignement sur le CROSS AXE (y par défaut)
     center, flex-end, etc... */
   align-items: center;
 

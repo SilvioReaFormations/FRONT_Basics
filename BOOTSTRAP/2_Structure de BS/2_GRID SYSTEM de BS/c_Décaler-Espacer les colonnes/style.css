@@ -1,0 +1,13 @@
+.container {
+    
+}
+
+.col {
+    font-weight: bold;
+    text-align: center;
+}
+
+.row div p {
+    background-color: cornflowerblue;
+    margin: 0;
+}
