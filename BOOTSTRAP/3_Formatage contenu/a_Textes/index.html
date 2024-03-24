@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<!-- Bootstrap va appliquer nativement du style à notre contenu à partir du moment où on l'importe 
+
+    CE COURS EST DANS LA DOC car trop dense: 
+
+https://getbootstrap.com/docs/5.0/content/typography/-->
+
+
+<body>
+
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Taille des titres -->
+            <h1 class="display-3">Formater du contenu avec Bootstrap
+                <!-- Sous titre -->
+                <small class="text-muted"> mon sous-titre</small>
+            </h1>
+            <h2>Exemple h2</h2>
+
+
+            <!-- Faire ressortir un paragraphe -->
+            <p class="lead">mon paragraphe mis en avant</p>
+            <p>mon paragraphe <abbr title="hyper text">HTML</abbr></p>
+
+
+            <!-- Citation (Blockquote) -->
+            <figure>
+                <blockquote class="blockquote">
+                    <p>Voici ma citation</p>
+                </blockquote>
+                <figcaption class="blockquote-footer"> 
+                    citation de moi-meme dans <cite>"Le livre de Silvio"</cite>
+                </figcaption>
+            </figure>
+
+
+            <!-- Alignement des textes -->
+            <p> Texte gauche </p>
+            <p class="text-center">Texte centre</p>
+            <p class="text-end">Texte droite</p>
+
+
+        </div>
+        
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
