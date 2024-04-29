@@ -10,7 +10,7 @@ img {
   width: 800px;
   height: 200px;
 
-  /* Object Fit Cover permets de ne pas déformer l'image si on change ses proportions, cela va tronquer l'image*/
+  /* Object Fit Cover permet de ne pas déformer l'image si on change ses proportions, cela va tronquer l'image*/
   object-fit: cover;
 
   /* Ensuite avec Object position, je peux désigner la partie de l'image à conserver */
